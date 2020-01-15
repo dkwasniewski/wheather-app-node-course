@@ -92,5 +92,5 @@ app.get('*', (req, res) => {
 
 app.listen(port, () => {
   // const addressMsg = chalk.cyan(`${port}`)
-  console.log(`Server is running on port ${addressMsg}`)
+  console.log(`Server is running on port ${port}`)
 })

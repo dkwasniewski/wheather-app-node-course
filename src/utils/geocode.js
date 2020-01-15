@@ -3,7 +3,8 @@ const request = require('request')
 
 function getGeocodeFullUrl(url, address, query) {
   if (!address) {
-    console.log(chalk.yellow.inverse('Please provide an address'))
+    console.log('Please provide an address')
+    // console.log(chalk.yellow.inverse('Please provide an address'))
   }
   return `${url}${encodeURIComponent(address)}.json?${query}`
 }
