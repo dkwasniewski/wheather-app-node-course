@@ -1,5 +1,3 @@
-console.log('Client side JS')
-
 fetch('/wheather?address=boston').then((res) => {
   res.json().then((data) => {
     if(data.error) {
