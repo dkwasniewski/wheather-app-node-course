@@ -90,7 +90,7 @@ app.get('*', (req, res) => {
   })
 })
 
-app.listen(SERVER.port, () => {
-  const addressMsg = chalk.cyan(`${SERVER.baseUrl}:${SERVER.port}`)
-  console.log(`Server is running on ${addressMsg}`)
+app.listen(port, () => {
+  const addressMsg = chalk.cyan(`${port}`)
+  console.log(`Server is running on port ${addressMsg}`)
 })
