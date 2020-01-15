@@ -1,5 +1,5 @@
 const request = require('request')
-const chalk = require('chalk')
+// const chalk = require('chalk')
 
 const config = require('../config')
 
@@ -19,12 +19,14 @@ function getWheaterMessage({
   let result
   request({ url, json: true }, (error, response) => {
     if (error) {
-      console.log(chalk.red.inverse(`Forecast API Error: ${error}`))
+      // console.log(chalk.red.inverse(`Forecast API Error: ${error}`))
+      console.log(c`Forecast API Error: ${error}`)
       return
     }
 
     if (!response.body) {
-      console.log(chalk.yellow.inverse('No forecast found'))
+      // console.log(chalk.yellow.inverse('No forecast found'))
+      console.log('No forecast found')
       return
     }
 

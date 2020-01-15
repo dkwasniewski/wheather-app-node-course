@@ -1,5 +1,5 @@
 const request = require('request')
-const chalk = require('chalk')
+// const chalk = require('chalk')
 
 function getGeocodeFullUrl(url, address, query) {
   if (!address) {
@@ -15,12 +15,14 @@ function getForecastByAddress({
 }) {
   request({ url, json: true }, (error, response) => {
     if (error) {
-      console.log(chalk.red.inverse(`Mapbox API Error: ${error}`))
+      console.log('Mapbox error', error)
+      // console.log(chalk.red.inverse(`Mapbox API Error: ${error}`))
       return
     }
 
     if (!response.body.features.length) {
-      console.log(chalk.yellow.inverse('No coordinates found'))
+      console.log('No coordinates found')
+      // console.log(chalk.yellow.inverse('No coordinates found'))
       return
     }
 
