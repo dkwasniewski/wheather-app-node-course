@@ -1,5 +1,5 @@
 const express = require('express')
-const chalk = require('chalk')
+// const chalk = require('chalk')
 const path = require('path')
 const hbs = require('hbs')
 
@@ -92,5 +92,5 @@ app.get('*', (req, res) => {
 
 app.listen(port, () => {
   const addressMsg = chalk.cyan(`${port}`)
-  console.log(`Server is running on port ${addressMsg}`)
+  // console.log(`Server is running on port ${addressMsg}`)
 })
