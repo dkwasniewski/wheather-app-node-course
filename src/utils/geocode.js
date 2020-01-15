@@ -27,7 +27,7 @@ function getForecastByAddress({
     const { place_name, center } = response.body.features[0]
     const lat = center[1]
     const long = center[0]
-    const data = await callback({
+    const data = callback({
       place: place_name,
       lat,
       long,
