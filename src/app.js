@@ -4,6 +4,7 @@ const path = require('path')
 const hbs = require('hbs')
 
 const app = express()
+const port = process.env.PORT || 3000
 
 // Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, '../public')
@@ -26,7 +27,7 @@ hbs.registerPartials(partialsPath)
 app.use(express.static(publicDirectoryPath))
 
 const SERVER = {
-  port: 3000,
+  port,
   baseUrl: 'http://localhost'
 }
 

@@ -1,13 +1,3 @@
-fetch('/wheather?address=boston').then((res) => {
-  res.json().then((data) => {
-    if(data.error) {
-      console.error(data.error)
-      return
-    }
-    console.log(data)
-  })
-})
-
 document.getElementById('input-search').addEventListener('keyup', (event) => {
   if(event.keyCode !== 13) {
     return
